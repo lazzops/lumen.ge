@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapa Lumen</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #ff007f, #00c6ff);
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    section#membros {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .insta-btn {
+      background: #E1306C;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 22px;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .insta-btn:hover {
+      background: #c8265e;
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Chapa Lumen</h1>
+    <p>Juntos por uma escola mais iluminada ✨</p>
+  </header>
+
+  <section id="membros">
+    <h2>Membros da Chapa</h2>
+    <div class="grid">
+      <div class="card"><h3>Julia</h3><p>Presidente da Chapa</p></div>
+      <div class="card"><h3>Isabelle</h3><p>Vice-presidente da Chapa</p></div>
+      <div class="card"><h3>Alberto</h3><p>Primeiro Secretário</p></div>
+      <div class="card"><h3>Yasmin</h3><p>Segundo Secretário</p></div>
+      <div class="card"><h3>Madu</h3><p>Segundo Tesoureiro</p></div>
+      <div class="card"><h3>Beatriz Vitória</h3><p>Diretora Social</p></div>
+      <div class="card"><h3>Fernanda</h3><p>Diretora de Comunicação e Imprensa</p></div>
+      <div class="card"><h3>Karyna</h3><p>Diretora de Cultura e Diversidade</p></div>
+      <div class="card"><h3>Ana Beatriz</h3><p>Diretora de Esporte e Lazer</p></div>
+      <div class="card"><h3>Vinícius</h3><p>Diretor de Saúde e Meio Ambiente</p></div>
+      <div class="card"><h3>Beatriz Pereira</h3><p>Diretora de Relações Acadêmicas</p></div>
+    </div>
+    <style>
+  .form-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+  }
+
+  @media (max-width: 600px) {
+    iframe {
+      height: 1000px;
+    }
+  }
+</style>
+
+<div class="form-container">
+  <iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLSdw-PKOD6hBn6-O5SJ39QM8ILidS8QklYHbLgdM8-C1n6PkjA/viewform?embedded=true" 
+    allowfullscreen>
+    Carregando…
+  </iframe>
+</div>
+
+  </section>
+
+  <footer>
+    <a href="https://instagram.com/lumen.ge" target="_blank" class="insta-btn" title="Siga a Chapa Lumen no Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </footer>
+
+</body>
+</html>
