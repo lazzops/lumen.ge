@@ -2,13 +2,13 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Grêmio Lumen</title>
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
     html {
@@ -20,15 +20,14 @@
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(120deg, #ff007f, #00c6ff);
       color: white;
-      padding-top: 60px; /* para não ficar atrás do menu fixo */
+      padding-top: 60px; /* espaço para o menu fixo */
     }
 
-    /* MENU FIXO */
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.5);
       display: flex;
       justify-content: center;
       gap: 30px;
@@ -43,6 +42,7 @@
       text-decoration: none;
       font-size: 1rem;
       transition: color 0.3s;
+      cursor: pointer;
     }
 
     nav a:hover {
@@ -73,6 +73,7 @@
     section h2 {
       font-size: 2rem;
       margin-bottom: 20px;
+      user-select: none;
     }
 
     .grid {
@@ -136,15 +137,34 @@
     }
 
     .highlight-section {
-      background-color: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.12);
       border-radius: 16px;
       padding: 30px;
       color: white;
+      backdrop-filter: blur(8px);
     }
 
-    footer {
-      text-align: center;
-      padding: 30px;
+    /* Estilo para o título clicável dos projetos */
+    #projetos h2 {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      user-select: none;
+    }
+
+    /* Ícone que será alternado (seta) */
+    #projetos h2 .icon {
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+      display: inline-block;
+    }
+
+    /* Conteúdo escondido por padrão */
+    #rifa-content {
+      display: none;
+      margin-top: 15px;
     }
   </style>
 </head>
@@ -179,18 +199,22 @@
   </section>
 
   <section id="projetos" class="highlight-section">
-    <h2>Projetos em andamento</h2>
-    <p>
-      <strong>Projeto em andamento: Rifa Beto Carrero.</strong><br><br>
-      Em setembro vai acontecer um passeio pro Beto Carrero, voltado pros alunos do 1° e 2° ano do Ensino Médio. O valor do ingresso gira em torno de R$300, dependendo do lote. <br><br>
-      Pensando em incluir mais gente nessa experiência, o Grêmio Lumen vai realizar uma rifa aberta a todos os alunos da manhã, inclusive os que não estavam previstos no passeio, como os alunos do 9° e 3° ano.<br><br>
-      O projeto é simples:<br>
-      🎟 Cada número da rifa custa R$6.<br>
-      🎁 Quem for sorteado ganha o ingresso 100% pago pelo Grêmio.<br>
-      🗓 As vendas começam hoje e são limitadas a 100 números.<br><br>
-      Ou seja: com R$6, você pode garantir a chance de economizar mais de R$300 e ainda participar de um passeio divertido e exclusivo. Uma oportunidade de aproveitar sem se preocupar com o custo.<br><br>
-      Procure um membro do grêmio estudantil para comprar seu número ou entre em contato pelo instagram!
-    </p>
+    <h2 onclick="toggleRifa()">
+      <span class="icon" id="toggle-icon">▶</span> Projetos em andamento
+    </h2>
+    <div id="rifa-content">
+      <p>
+        <strong>Projeto em andamento: Rifa Beto Carrero.</strong><br><br>
+        Em setembro vai acontecer um passeio pro Beto Carrero, voltado pros alunos do 1° e 2° ano do Ensino Médio. O valor do ingresso gira em torno de R$300, dependendo do lote.<br><br>
+        Pensando em incluir mais gente nessa experiência, o Grêmio Lumen vai realizar uma rifa aberta a todos os alunos da manhã, inclusive os que não estavam previstos no passeio, como os alunos do 9° e 3° ano.<br><br>
+        O projeto é simples:<br>
+        🎟 Cada número da rifa custa R$6.<br>
+        🎁 Quem for sorteado ganha o ingresso 100% pago pelo Grêmio.<br>
+        🗓 As vendas começam hoje e são limitadas a 100 números.<br><br>
+        Ou seja: com R$6, você pode garantir a chance de economizar mais de R$300 e ainda participar de um passeio divertido e exclusivo. Uma oportunidade de aproveitar sem se preocupar com o custo.<br><br>
+        Procure um membro do grêmio estudantil para comprar seu número ou entre em contato pelo instagram!
+      </p>
+    </div>
   </section>
 
   <section id="conhecimento" class="highlight-section">
@@ -224,16 +248,44 @@
     </a>
   </footer>
 
+  <script>
+    // Função para abrir/fechar a seção da rifa com toggle e trocar o ícone
+    function toggleRifa() {
+      const content = document.getElementById('rifa-content');
+      const icon = document.getElementById('toggle-icon');
+      if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+        icon.textContent = '▼';
+        content.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        content.style.display = 'none';
+        icon.textContent = '▶';
+      }
+    }
+
+    // Controle para o menu fixo: rolar para seção ao clicar nos links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+
+        // Se clicar em projetos, abre a aba automaticamente
+        if(targetId === 'projetos'){
+          // Se não estiver aberta, abre
+          const content = document.getElementById('rifa-content');
+          const icon = document.getElementById('toggle-icon');
+          if(content.style.display === 'none' || content.style.display === ''){
+            content.style.display = 'block';
+            icon.textContent = '▼';
+          }
+        }
+
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
-<script>
-  document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
