@@ -3,55 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Grêmio Lumen</title>
+  <title>💙 pra giovanna</title>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
     html {
       scroll-behavior: smooth;
     }
 
     body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(120deg, #ff007f, #00c6ff);
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
       color: white;
-      padding-top: 60px; /* espaço para o menu fixo */
+      padding-top: 70px;
     }
 
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.4);
       display: flex;
       justify-content: center;
       gap: 30px;
       padding: 15px 0;
       z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
     }
 
     nav a {
       color: white;
-      font-weight: 600;
       text-decoration: none;
-      font-size: 1rem;
-      transition: color 0.3s;
+      font-weight: 600;
       cursor: pointer;
-    }
-
-    nav a:hover {
-      color: #ff007f;
     }
 
     header {
       text-align: center;
-      padding: 40px 20px 20px;
+      padding: 40px 20px;
     }
 
     header h1 {
@@ -65,14 +62,17 @@
     }
 
     section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      backdrop-filter: blur(8px);
     }
 
-    section h2 {
-      font-size: 2rem;
+    h2 {
       margin-bottom: 20px;
+      font-size: 2rem;
       user-select: none;
     }
 
@@ -80,212 +80,122 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      text-align: center;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255,255,255,0.2);
       border-radius: 16px;
       padding: 20px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      transition: transform 0.3s;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
     }
 
-    .form-container {
-      width: 100%;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 800px;
-      border: none;
-    }
-
-    @media (max-width: 600px) {
-      iframe {
-        height: 1000px;
-      }
-    }
-
-    .insta-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 12px;
-      background-color: #E1306C;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    .insta-btn i {
-      margin-right: 6px;
-    }
-
-    .insta-btn:hover {
-      background-color: #C13584;
-    }
-
-    .highlight-section {
-      background: rgba(255, 255, 255, 0.12);
-      border-radius: 16px;
-      padding: 30px;
-      color: white;
-      backdrop-filter: blur(8px);
-    }
-
-    /* Estilo para o título clicável dos projetos */
-    #projetos h2 {
+    .toggle-title {
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 8px;
-      user-select: none;
+      gap: 10px;
     }
 
-    /* Ícone que será alternado (seta) */
-    #projetos h2 .icon {
-      font-weight: bold;
-      font-size: 1.2rem;
+    .icon {
+      font-size: 1.4rem;
       transition: transform 0.3s;
-      display: inline-block;
     }
 
-    /* Conteúdo escondido por padrão */
-    #rifa-content {
+    #surpresa {
       display: none;
-      margin-top: 15px;
+      margin-top: 20px;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      opacity: 0.85;
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="#membros">Membros</a>
-    <a href="#projetos">Projetos em andamento</a>
-    <a href="#conhecimento">Conhecimento sem fronteiras</a>
+    <a href="#sobre">sobre você</a>
+    <a href="#momentos">surpresa</a>
+    <a href="#final">final</a>
   </nav>
 
   <header>
-    <h1>Chapa Lumen</h1>
-    <p>Juntos por uma escola melhor!</p>
+    <h1>giovanna</h1>
+    <p>isso é pra você 💙</p>
   </header>
 
-  <section id="membros">
-    <h2>Membros da Chapa</h2>
+  <section id="sobre">
+    <h2>algumas coisas que eu amo em você</h2>
     <div class="grid">
-      <div class="card"><h3>Julia</h3><p>Presidente da Chapa</p></div>
-      <div class="card"><h3>Isabelle</h3><p>Vice-presidente da Chapa</p></div>
-      <div class="card"><h3>Alberto</h3><p>Primeiro Secretário</p></div>
-      <div class="card"><h3>Yasmin</h3><p>Segundo Secretário</p></div>
-      <div class="card"><h3>Madu</h3><p>Segundo Tesoureiro</p></div>
-      <div class="card"><h3>Beatriz Vitória</h3><p>Diretora Social</p></div>
-      <div class="card"><h3>Fernanda</h3><p>Diretora de Comunicação e Imprensa</p></div>
-      <div class="card"><h3>Karyna</h3><p>Diretora de Cultura e Diversidade</p></div>
-      <div class="card"><h3>Ana Beatriz</h3><p>Diretora de Esporte e Lazer</p></div>
-      <div class="card"><h3>Vinícius</h3><p>Diretor de Saúde e Meio Ambiente</p></div>
-      <div class="card"><h3>Beatriz Pereira</h3><p>Diretora de Relações Acadêmicas</p></div>
+      <div class="card">
+        <h3>seu sorriso</h3>
+        <p>tem o poder de melhorar qualquer dia</p>
+      </div>
+      <div class="card">
+        <h3>seu jeito</h3>
+        <p>me faz sentir em casa</p>
+      </div>
+      <div class="card">
+        <h3>giovanna</h3>
+        <p>é meu lugar favorito</p>
+      </div>
     </div>
   </section>
 
-  <section id="projetos" class="highlight-section">
-    <h2 onclick="toggleRifa()">
-      <span class="icon" id="toggle-icon">▶</span> Projetos em andamento
+  <section id="momentos">
+    <h2 class="toggle-title" onclick="toggleSurpresa()">
+      <span class="icon" id="icon">▶</span> clica aqui
     </h2>
-    <div id="rifa-content">
-      <p>
-        <strong>Projeto em andamento: Rifa Beto Carrero.</strong><br><br>
-        Em setembro vai acontecer um passeio pro Beto Carrero, voltado pros alunos do 1° e 2° ano do Ensino Médio. O valor do ingresso gira em torno de R$300, dependendo do lote.<br><br>
-        Pensando em incluir mais gente nessa experiência, o Grêmio Lumen vai realizar uma rifa aberta a todos os alunos da manhã, inclusive os que não estavam previstos no passeio, como os alunos do 9° e 3° ano.<br><br>
-        O projeto é simples:<br>
-        🎟 Cada número da rifa custa R$6.<br>
-        🎁 Quem for sorteado ganha o ingresso 100% pago pelo Grêmio.<br>
-        🗓 As vendas começam hoje e são limitadas a 100 números.<br><br>
-        Ou seja: com R$6, você pode garantir a chance de economizar mais de R$300 e ainda participar de um passeio divertido e exclusivo. Uma oportunidade de aproveitar sem se preocupar com o custo.<br><br>
-        Procure um membro do grêmio estudantil para comprar seu número ou entre em contato pelo instagram!
-      </p>
+
+    <div id="surpresa">
+      giovanna,<br><br>
+      eu não sou o melhor com palavras,<br>
+      mas fiz isso pra te mostrar<br>
+      o quanto você é importante pra mim.<br><br>
+      cada detalhe aqui é simples,<br>
+      mas é sincero.<br><br>
+      assim como o que eu sinto.
     </div>
   </section>
 
-  <section id="conhecimento" class="highlight-section">
-    <h2>Conhecimento sem fronteiras</h2>
+  <section id="final">
+    <h2>no fim</h2>
     <p>
-      Nós, do grêmio Lumen, acreditamos que aprender vai muito além das salas de aula! Visamos promover a organização de ações de mentoria entre estudantes, rodas de conversa e palestras sobre profissões e mercado de trabalho.
-    </p>
-
-    <h2>Eco-escola</h2>
-    <p>
-      Vamos iniciar projetos de reciclagem, campanhas de conscientização sobre economia de energia e água, dar mais atenção aos espaços verdes e ao cuidado ambiental da escola, que pode – e deve – ser um espaço mais sustentável.
-    </p>
-
-    <h2>Escola para todos</h2>
-    <p>
-      O grêmio Lumen visa criar um ambiente de respeito, onde todos possam se sentir bem e seguros para serem o que são; Teremos campanhas permanentes contra qualquer vertente de bullying, discriminação e preconceito, para que todos possam se expressar e crescer da melhor forma, tornando o ambiente acolhedor e respeitoso. Também vamos abrir espaços para que os alunos possam expressar suas ideias para a escola, e dividir suas sugestões, online ou presencialmente. No que diz respeito à infraestrutura, teremos melhorias pontuais, pequenos reparos, que mantenham o básico funcionando. Faça sua parte, e nos ajude preservando o espaço escolar!
+      eu faria isso mil vezes.<br><br>
+      porque você vale cada linha,<br>
+      cada tentativa,<br>
+      cada detalhe.
     </p>
   </section>
-
-  <div class="form-container">
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdw-PKOD6hBn6-O5SJ39QM8ILidS8QklYHbLgdM8-C1n6PkjA/viewform?embedded=true" 
-      allowfullscreen>
-      Carregando…
-    </iframe>
-  </div>
 
   <footer>
-    <a href="https://instagram.com/lumen.ge" target="_blank" class="insta-btn" title="Siga a Chapa Lumen no Instagram">
-      <i class="fab fa-instagram"></i> lumen.ge
-    </a>
+    feito especialmente pra giovanna 💙
   </footer>
 
   <script>
-    // Função para abrir/fechar a seção da rifa com toggle e trocar o ícone
-    function toggleRifa() {
-      const content = document.getElementById('rifa-content');
-      const icon = document.getElementById('toggle-icon');
-      if (content.style.display === 'none' || content.style.display === '') {
-        content.style.display = 'block';
-        icon.textContent = '▼';
-        content.scrollIntoView({ behavior: 'smooth' });
+    function toggleSurpresa() {
+      const surpresa = document.getElementById("surpresa");
+      const icon = document.getElementById("icon");
+
+      if (surpresa.style.display === "none" || surpresa.style.display === "") {
+        surpresa.style.display = "block";
+        icon.textContent = "▼";
+        surpresa.scrollIntoView({ behavior: "smooth" });
       } else {
-        content.style.display = 'none';
-        icon.textContent = '▶';
+        surpresa.style.display = "none";
+        icon.textContent = "▶";
       }
     }
-
-    // Controle para o menu fixo: rolar para seção ao clicar nos links
-    document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-
-        // Se clicar em projetos, abre a aba automaticamente
-        if(targetId === 'projetos'){
-          // Se não estiver aberta, abre
-          const content = document.getElementById('rifa-content');
-          const icon = document.getElementById('toggle-icon');
-          if(content.style.display === 'none' || content.style.display === ''){
-            content.style.display = 'block';
-            icon.textContent = '▼';
-          }
-        }
-
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
   </script>
+
 </body>
 </html>
